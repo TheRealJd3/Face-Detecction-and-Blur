@@ -73,7 +73,10 @@ def merge_with_original(img, original, gaussian_image):
 
 
 def run_fd():
-    result = original_image_processing('groupp1.jpg')
+    file_name = 'groupp1.jpg'
+    result = original_image_processing(file_name)
+    input_img = plt.imread(file_name)
+    image_plot(input_img,'gray','Input')
     image_plot(result, 'gray', "Blurred faces")
 
 if __name__ == '__main__':
